@@ -22,13 +22,13 @@ def question():
                         "My sources say no",
                         "Outlook not so good",
                         "Very doubtful"])
-    return possible_answers
+    return quest, possible_answers
 
 while True:
-    the_question = question()
-    if the_question == "quit":
+    quest, answer = question()
+    if quest == "quit":
         break
-    elif '?' not in the_question:
+    elif '?' not in quest:
         print("Im sorry, I can only answer questions.")
     else:
-        print(the_question)
+        print(answer)
